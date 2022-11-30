@@ -1,7 +1,12 @@
 import React from "react";
+import PokeGrid from "../components/PokeGrid";
 
 const Home = () => {
-    return <div>Home</div>;
+    return (
+        <div className="Home">
+            <PokeGrid/>
+        </div>
+    );
 };
 
 export default Home;

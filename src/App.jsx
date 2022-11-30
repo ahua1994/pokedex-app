@@ -1,6 +1,9 @@
 // import { useEffect, useState } from "react";
-import "./App.css";
-import PokeGrid from "./components/PokeGrid";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Stats from "./pages/Stats";
+import Error from "./pages/Error";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
     // const [data, setData] = useState();
@@ -34,7 +37,14 @@ function App() {
     // "https://pokeapi.co/api/v2/pokemon?limit=100&offset=151"
     return (
         <div className="App">
-            <PokeGrid />
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path=":pokeId" element={<Stats />}></Route>
+                    <Route path="about" element={<About />} />
+                    <Route path="*" element={<Error />} />
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }
