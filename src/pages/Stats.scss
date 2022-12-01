@@ -1,6 +1,23 @@
 .Stats { 
-    display: flex;
-    h1{
-        margin: 0;
+    display: flex; 
+    .profile{
+        h1{
+            margin: 0;
+        }
+        button{
+            background-color: rgb(14, 128, 14);
+            color: white;
+            padding: 0.7rem;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            cursor: pointer; 
+            transition: background-color 0.15s ease-in-out;
+            &:hover{
+                background-color: rgb(10, 90, 10);
+            }
+            &:active{
+                background-color: rgb(7, 60, 7);
+            }
+        }
     }
 }

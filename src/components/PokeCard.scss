@@ -1,2 +1,14 @@
-.PokeCard { 
+.PokeCard {
+    p{ 
+        margin: 0; 
+        text-align: center;
+        transform: translateY( -80%);
+        text-transform: capitalize;
+    }
+}
+a {
+    text-decoration: none;
+    &:visited,&:link{
+        color: unset;
+    }
 }

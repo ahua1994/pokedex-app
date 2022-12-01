@@ -6,6 +6,7 @@ const PokeCard = ({ poke }) => {
         <Link to={`/${poke.name}`}>
             <div className="PokeCard">
                 <img src={poke.sprite} alt={poke.name} />
+                <p>{poke.name}</p>
             </div>
         </Link>
     );

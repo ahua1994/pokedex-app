@@ -1,10 +1,12 @@
 import React from "react";
+import Banner from "../components/Banner";
 import PokeGrid from "../components/PokeGrid";
 
 const Home = () => {
     return (
         <div className="Home">
-            <PokeGrid/>
+            <Banner />
+            <PokeGrid />
         </div>
     );
 };
