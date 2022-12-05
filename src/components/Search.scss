@@ -1,0 +1,36 @@
+.Search {
+    input{ 
+        font-size: 1.4rem;
+        background-color: rgb(4, 59, 92);
+        border-radius: 5px;
+        &:focus{
+            outline: 2px rgb(136, 162, 179) solid;
+        }
+        color: white;
+    }
+    button{
+        background-color: rgb(14, 128, 14);
+        color: white;
+        padding: 0.35rem 0.7rem;
+        margin-left: 5px;
+        border-radius: 7px;
+        font-size: 1.1rem;
+        cursor: pointer; 
+        transition: background-color 0.15s ease-in-out;
+        &:hover{
+            background-color: rgb(10, 90, 10);
+        }
+        &:active{
+            background-color: rgb(7, 60, 7);
+        }
+    }
+    select{
+        font-size: 1.4rem;
+        background-color: rgb(4, 59, 92);
+        border-radius: 5px;
+        &:focus{
+            outline: 2px rgb(136, 162, 179) solid;
+        } 
+        color: white;
+    }
+}

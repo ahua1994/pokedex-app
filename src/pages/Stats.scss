@@ -1,10 +1,29 @@
-.Stats { 
-    display: flex; 
-    .profile{
-        h1{
+.Stats {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    h1 {
+        text-transform: capitalize;
+        text-align: center;
+    }
+    .stat {
+        text-transform: capitalize;  
+        // display: flex; 
+        margin-bottom: 1rem;
+        // background-color: gray;  
+    } 
+    .profile { 
+        margin-top: 2rem;
+        h1 {
             margin: 0;
-        }
-        button{
+        } 
+    }
+}
+.center { 
+    display: flex;
+    justify-content: space-around;
+    .back-btn {
+        margin-top: 3rem;
             background-color: rgb(14, 128, 14);
             color: white;
             padding: 0.7rem;
@@ -12,12 +31,19 @@
             font-size: 1.1rem;
             cursor: pointer; 
             transition: background-color 0.15s ease-in-out;
-            &:hover{
+            &:hover {
                 background-color: rgb(10, 90, 10);
             }
-            &:active{
+            &:active {
                 background-color: rgb(7, 60, 7);
             }
         }
-    }
+}
+.w3-container{
+    color: white !important;  
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+    white-space: nowrap;
+}    
+.w3-round{
+    width: 1000px; 
 }
