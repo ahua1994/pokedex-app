@@ -1,12 +1,11 @@
 .Stats {
     display: flex;
     justify-content: flex-end;
-    padding-top: 2rem;
+    padding-top: 2rem; 
     .stat {
         text-transform: capitalize;
         // display: flex;
-        margin-bottom: 1rem;
-        // background-color: gray;
+        margin-bottom: 1rem; 
         padding-right: 10px;
     }
     .profile {
@@ -27,6 +26,9 @@
         margin-top: 3rem;
     }
 }
+.pic{
+    animation: fadeIn 2.6s ease-in-out;
+}
 .title {
     text-transform: capitalize;
     text-align: center;
@@ -44,28 +46,59 @@
 .center {
     display: flex;
     justify-content: space-around;
-    .back-btn {
-        margin-top: 2rem;
-        background-color: rgb(14, 128, 14);
-        color: white;
-        padding: 0.7rem;
-        border-radius: 7px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        transition: background-color 0.15s ease-in-out;
-        &:hover {
-            background-color: rgb(10, 90, 10);
-        }
-        &:active {
-            background-color: rgb(7, 60, 7);
-        }
+}
+.back-btn {
+    margin-top: 2rem;
+    background-color: rgb(14, 128, 14);
+    color: white;
+    padding: 0.7rem;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    &:hover {
+        background-color: rgb(10, 90, 10);
+    }
+    &:active {
+        background-color: rgb(7, 60, 7);
     }
 }
 .w3-container {
     color: white !important;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    animation: progress 2s ease-out ;
     white-space: nowrap;
 }
 .w3-round {
     width: 1000px;
+}
+
+@keyframes progress {
+    0% {
+        width: 0%; 
+    } 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%; 
+    } 
+}
+
+@media screen and (max-width: 1550px) {
+    .Stats {
+        flex-direction: column;
+        align-items: center; 
+        .stat{
+            padding: 0px; 
+        }
+        .profile{
+            img{
+                width: 100%;
+            }
+        }
+    }  
+    .w3-round {
+        width: 100%;
+    }
 }

@@ -1,4 +1,130 @@
 .PokeGrid {
-    display: grid; 
-    grid-template-columns: repeat(19, 1fr);    
+    text-align: center;
+    .container{ 
+        display: grid; 
+        grid-template-columns: repeat(19, 1fr);    
+    }
+    h3{
+        margin-top: 6rem;
+    }
+}
+
+@media screen and (max-width: 1919px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(18, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 1815px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(17, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 1711px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(16, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 1607px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(15, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 1503px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(14, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 1399px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(13, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 1295px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(12, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 1191px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(11, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 1087px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(10, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 983px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(9, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 879px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(8, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 775px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(7, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 671px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 567px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 463px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 459px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+@media screen and (max-width: 255px){
+    .PokeGrid{
+        .container{ 
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 }

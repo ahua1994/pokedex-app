@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div style={style} className="Banner">
             <img
-                style={{ width: "25rem" }}
+                style={{ maxWidth: "25rem", width: "90%" }}
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1920px-International_Pok%C3%A9mon_logo.svg.png"
                 alt="Pokemon Logo"
             />

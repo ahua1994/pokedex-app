@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { pokemon } from "../data";
 import { sprites } from "../sprites";
 import { useState, useEffect } from "react";
+import Error from "./Error";
 
 const Stats = () => {
     const [desc, setDesc] = useState("");
@@ -35,12 +36,12 @@ const Stats = () => {
                     </h3>
                     <div className="Stats">
                         <div className="profile">
-                            <img src={poke.official} alt={poke.name} />
+                            <img className="pic" src={poke.official} alt={poke.name} />
                             <div className="shiny">
                                 <h4>
                                     <b>Shiny:</b>
                                 </h4>
-                                <img src={poke.shiny} alt="shiny" />
+                                <img className="pic" src={poke.shiny} alt="shiny" />
                             </div>
                         </div>
                         <div className="basestats">
@@ -104,16 +105,7 @@ const Stats = () => {
                     </div>
                 </>
             ) : (
-                <>
-                    <img
-                        src="https://media.wired.com/photos/5f87340d114b38fa1f8339f9/master/w_1600%2Cc_limit/Ideas_Surprised_Pikachu_HD.jpg"
-                        alt="surprised pikachu"
-                    />
-                    <h1>Database Does Not Contain This Pokemon</h1>
-                    <button className="back-btn" onClick={() => navigate("/")}>
-                        Home
-                    </button>
-                </>
+                <Error />
             )}
         </>
     );
