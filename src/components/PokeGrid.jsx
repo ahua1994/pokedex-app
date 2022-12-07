@@ -3,7 +3,6 @@ import "./PokeGrid.scss";
 import PokeCard from "./PokeCard";
 
 const PokeGrid = ({ pokemon }) => {
-    console.log(pokemon);
     return (
         <div className="PokeGrid">
             {pokemon.length ? (

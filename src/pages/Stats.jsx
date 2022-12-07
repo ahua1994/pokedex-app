@@ -22,7 +22,7 @@ const Stats = () => {
                 setEvo(x.evolves_from_species?.name);
                 setDesc(x.flavor_text_entries[2].flavor_text.replace("\f", " "));
             });
-    }, []);
+    }, [path]);
 
     return (
         <>
