@@ -1,10 +1,12 @@
 import "./Stats.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 import { pokemon } from "../data";
+import { sprites } from "../sprites";
 import { useState, useEffect } from "react";
 
 const Stats = () => {
     const [desc, setDesc] = useState("");
+    const [evo, setEvo] = useState("");
     const location = useLocation();
     const navigate = useNavigate();
     const path = location.pathname.replace("/", "");
@@ -15,19 +17,31 @@ const Stats = () => {
         fetch(`https://pokeapi.co/api/v2/pokemon-species/${path}`)
             .then(x => x.json())
             // .catch(() => navigate("*"))
-            .then(x => setDesc(x.flavor_text_entries[2].flavor_text.replace("\f", " ")));
+            .then(x => {
+                setEvo(x.evolves_from_species?.name);
+                setDesc(x.flavor_text_entries[2].flavor_text.replace("\f", " "));
+            });
     }, []);
 
     return (
         <>
             {poke ? (
                 <>
+                    <h1 className="title">{`${poke.name} #${poke.id}`}</h1>
+                    <h3 className="types">
+                        {poke.types.map(type => (
+                            <img key={type} className="type" src={sprites[type]} alt={type} />
+                        ))}
+                    </h3>
                     <div className="Stats">
                         <div className="profile">
-                            <h1>{poke.name}</h1>
                             <img src={poke.official} alt={poke.name} />
-                            <p>Shiny</p>
-                            <img src={poke.shiny} alt="shiny" />
+                            <div className="shiny">
+                                <h4>
+                                    <b>Shiny:</b>
+                                </h4>
+                                <img src={poke.shiny} alt="shiny" />
+                            </div>
                         </div>
                         <div className="basestats">
                             {Object.entries(poke.stats).map((x, i) => (
@@ -74,7 +88,13 @@ const Stats = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p>{desc}</p>
+                            <h4>
+                                <b>Pokemon Data Entry:</b>
+                            </h4>
+                            <h5>{desc}</h5>
+                            <h5 style={{ textTransform: "capitalize", fontSize: "1.3rem" }}>
+                                <b>Evolves From:</b> {evo || "Pre-Evolution Not Found"}
+                            </h5>
                         </div>
                     </div>
                     <div className="center">
@@ -89,7 +109,7 @@ const Stats = () => {
                         src="https://media.wired.com/photos/5f87340d114b38fa1f8339f9/master/w_1600%2Cc_limit/Ideas_Surprised_Pikachu_HD.jpg"
                         alt="surprised pikachu"
                     />
-                    <h1>We don't have that pokemon in our database</h1>
+                    <h1>Database Does Not Contain This Pokemon</h1>
                     <button className="back-btn" onClick={() => navigate("/")}>
                         Home
                     </button>

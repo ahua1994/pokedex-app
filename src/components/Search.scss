@@ -1,36 +1,56 @@
 .Search {
-    input{ 
-        font-size: 1.4rem;
-        background-color: rgb(4, 59, 92);
-        border-radius: 5px;
-        &:focus{
-            outline: 2px rgb(136, 162, 179) solid;
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 2rem 0; 
+    .left {
+        input {
+            font-size: 1.4rem;
+            background-color: rgb(4, 59, 92);
+            border-radius: 5px;
+            padding-left: 8px;
+            &:focus {
+                outline: 2px rgb(136, 162, 179) solid;
+            }
+            color: white;
         }
-        color: white;
+        button {
+            background-color: rgb(14, 128, 14);
+            color: white;
+            padding: 0.35rem 0.7rem;
+            margin-left: 5px;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out;
+            &:hover {
+                background-color: rgb(10, 90, 10);
+            }
+            &:active {
+                background-color: rgb(7, 60, 7);
+            }
+        }
     }
-    button{
-        background-color: rgb(14, 128, 14);
-        color: white;
-        padding: 0.35rem 0.7rem;
-        margin-left: 5px;
-        border-radius: 7px;
-        font-size: 1.1rem;
-        cursor: pointer; 
-        transition: background-color 0.15s ease-in-out;
-        &:hover{
-            background-color: rgb(10, 90, 10);
+    .right {
+        margin-left: 3rem;
+        label {
+            font-size: 1.6rem;
         }
-        &:active{
-            background-color: rgb(7, 60, 7);
+        select {
+            transform: translate(3px, 3px);
+            font-size: 1.4rem;
+            background-color: rgb(4, 59, 92);
+            border-radius: 5px;
+            padding: 2px 0 2px 8px ;
+            text-transform: capitalize;
+            &:focus {
+                outline: 2px rgb(136, 162, 179) solid;
+            }
+            color: white;
         }
-    }
-    select{
-        font-size: 1.4rem;
-        background-color: rgb(4, 59, 92);
-        border-radius: 5px;
-        &:focus{
-            outline: 2px rgb(136, 162, 179) solid;
-        } 
-        color: white;
+        #type{
+            .type-option{
+                text-transform: capitalize;
+            }
+        }
     }
 }

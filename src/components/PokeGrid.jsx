@@ -1,13 +1,14 @@
 import "./PokeGrid.scss";
-import { pokemon } from "../data";
+
 import PokeCard from "./PokeCard";
 
-const PokeGrid = () => {
+const PokeGrid = ({ pokemon }) => {
+    console.log(pokemon);
     return (
         <div className="PokeGrid">
-            {pokemon.map(poke => (
-                <PokeCard key={poke.id} poke={poke} />
-            ))}
+            {pokemon.length
+                ? pokemon.map(poke => <PokeCard key={poke.id} poke={poke} />)
+                : "No Search Results."}
         </div>
     );
 };

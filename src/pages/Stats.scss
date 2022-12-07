@@ -1,49 +1,71 @@
 .Stats {
     display: flex;
     justify-content: flex-end;
-    align-items: center; 
-    h1 {
-        text-transform: capitalize;
-        text-align: center;
-    }
+    padding-top: 2rem;
     .stat {
-        text-transform: capitalize;  
-        // display: flex; 
+        text-transform: capitalize;
+        // display: flex;
         margin-bottom: 1rem;
-        // background-color: gray;  
-    } 
-    .profile { 
-        margin-top: 2rem;
+        // background-color: gray;
+        padding-right: 10px;
+    }
+    .profile {
         h1 {
             margin: 0;
-        } 
+        }
+        .shiny {
+            display: flex; 
+            justify-content: center;  
+            img{
+                width: 10rem;
+                margin-top: 2.5rem;
+                position: relative; 
+            }
+        }
+    }
+    h4 {
+        margin-top: 3rem;
     }
 }
-.center { 
+.title {
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+    padding-top: 2rem;
+}
+.types {
+    text-align: center;
+    text-transform: capitalize; 
+    .type {
+        width: 100px; 
+        margin: 0 0.5rem; 
+    }
+}
+.center {
     display: flex;
     justify-content: space-around;
     .back-btn {
-        margin-top: 3rem;
-            background-color: rgb(14, 128, 14);
-            color: white;
-            padding: 0.7rem;
-            border-radius: 7px;
-            font-size: 1.1rem;
-            cursor: pointer; 
-            transition: background-color 0.15s ease-in-out;
-            &:hover {
-                background-color: rgb(10, 90, 10);
-            }
-            &:active {
-                background-color: rgb(7, 60, 7);
-            }
+        margin-top: 2rem;
+        background-color: rgb(14, 128, 14);
+        color: white;
+        padding: 0.7rem;
+        border-radius: 7px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out;
+        &:hover {
+            background-color: rgb(10, 90, 10);
         }
+        &:active {
+            background-color: rgb(7, 60, 7);
+        }
+    }
 }
-.w3-container{
-    color: white !important;  
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+.w3-container {
+    color: white !important;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     white-space: nowrap;
-}    
-.w3-round{
-    width: 1000px; 
+}
+.w3-round {
+    width: 1000px;
 }
